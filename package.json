@@ -1,0 +1,59 @@
+{
+	"name": "ccsync",
+	"version": "0.1.0",
+	"description": "A tool to manage and sync claude.md files across projects",
+	"keywords": [
+		"claude",
+		"claude.md",
+		"sync",
+		"cli"
+	],
+	"author": "r74tech",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/r74tech/ccsync.git"
+	},
+	"bugs": {
+		"url": "https://github.com/r74tech/ccsync/issues"
+	},
+	"homepage": "https://github.com/r74tech/ccsync#readme",
+	"bin": {
+		"ccsync": "./src/index.ts"
+	},
+	"main": "./src/index.ts",
+	"module": "./src/index.ts",
+	"type": "module",
+	"files": [
+		"src",
+		"README.md",
+		"LICENSE"
+	],
+	"scripts": {
+		"dev": "bun run src/index.ts",
+		"test": "bun test",
+		"test:watch": "bun test --watch",
+		"typecheck": "bun --bun tsc --noEmit",
+		"lint": "bunx oxlint --silent",
+		"lint:strict": "bunx oxlint --deny-warnings",
+		"format": "bunx @biomejs/biome format --write .",
+		"format:check": "bunx @biomejs/biome format .",
+		"check": "bun run typecheck && bun test && bun run format:check && bun run lint"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.1.1",
+		"@types/bun": "latest",
+		"@types/node": "^24.0.13",
+		"oxlint": "1.6.0",
+		"typescript": "^5.8.3",
+		"vitest": "^3.2.4"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	},
+	"dependencies": {
+		"chalk": "^5.4.1",
+		"globby": "^14.1.0",
+		"zod": "^3.25.76"
+	}
+}
