@@ -38,6 +38,9 @@
 		"lint:strict": "bunx oxlint --deny-warnings",
 		"format": "bunx @biomejs/biome format --write .",
 		"format:check": "bunx @biomejs/biome format .",
+		"biome": "bunx @biomejs/biome check --write --unsafe .",
+		"biome:check": "bunx @biomejs/biome check .",
+		"fix": "bun run biome",
 		"check": "bun run typecheck && bun test && bun run format:check && bun run lint"
 	},
 	"devDependencies": {
