@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env bun
 import { parseArgs } from "node:util";
 import chalk from "chalk";
 import { commands } from "./commands/commands.ts";
